@@ -12,6 +12,8 @@ Notes:
 1. Only post _bug reports_ here.
 2. Use the appropriate template for _feature requests_.
 3. Please direct questions to the [`#formulas` channel on Slack](https://saltstackcommunity.slack.com/messages/C7LG8SV54/), which is bridged to `#saltstack-formulas` on Freenode.
+4. Feel free to suggest improvements to this template by reporting an issue or submitting a PR.  The source of this template is:
+  - https://github.com/saltstack-formulas/.github/blob/master/.github/ISSUE_TEMPLATE/bug_report.md
 -->
 
 ## Your setup
@@ -57,12 +59,5 @@ Notes:
 
 ### Additional context
 <!-- Add any other context about the problem here. -->
-
-
-
----
-
-### Meta: How can this template be improved?
-<!-- Feel free to suggest how this template can be improved. -->
 
 
