@@ -23,7 +23,8 @@ Notes:
 
 
 ### Versions reports (master & minion)
-<!-- Provided by running `salt --versions-report`. Please also mention any differences in master/minion versions. -->
+<!-- Provided by running `salt --versions-report` or its short-form `salt -V`. -->
+<!-- Please also mention any differences in master/minion versions. -->
 
 
 
