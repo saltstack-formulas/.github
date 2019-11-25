@@ -173,6 +173,7 @@ These formulas are already compatible with semantic-release:
 #. `cron-formula <https://github.com/saltstack-formulas/cron-formula>`_
 #. `deepsea-formula <https://github.com/saltstack-formulas/deepsea-formula>`_
 #. `dhcpd-formula <https://github.com/saltstack-formulas/dhcpd-formula>`_
+#. `django-formula <https://github.com/saltstack-formulas/django-formula>`_
 #. `docker-formula <https://github.com/saltstack-formulas/docker-formula>`_
 #. `epel-formula <https://github.com/saltstack-formulas/epel-formula>`_
 #. `exim-formula <https://github.com/saltstack-formulas/exim-formula>`_
@@ -216,6 +217,7 @@ These formulas are already compatible with semantic-release:
 #. `timezone-formula <https://github.com/saltstack-formulas/timezone-formula>`_
 #. `ufw-formula <https://github.com/saltstack-formulas/ufw-formula>`_
 #. `users-formula <https://github.com/saltstack-formulas/users-formula>`_
+#. `varnish-formula <https://github.com/saltstack-formulas/varnish-formula>`_
 #. `vault-formula <https://github.com/saltstack-formulas/vault-formula>`_
 #. `vim-formula <https://github.com/saltstack-formulas/vim-formula>`_
 #. `vsftpd-formula <https://github.com/saltstack-formulas/vsftpd-formula>`_
