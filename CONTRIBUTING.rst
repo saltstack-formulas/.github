@@ -198,6 +198,7 @@ These formulas are already compatible with semantic-release:
 #. `nfs-formula <https://github.com/saltstack-formulas/nfs-formula>`_
 #. `nginx-formula <https://github.com/saltstack-formulas/nginx-formula>`_
 #. `nifi-formula <https://github.com/saltstack-formulas/nifi-formula>`_
+#. `node-formula <https://github.com/saltstack-formulas/node-formula>`_
 #. `ntp-formula <https://github.com/saltstack-formulas/ntp-formula>`_
 #. `openldap-formula <https://github.com/saltstack-formulas/openldap-formula>`_
 #. `openssh-formula <https://github.com/saltstack-formulas/openssh-formula>`_
@@ -206,6 +207,7 @@ These formulas are already compatible with semantic-release:
 #. `php-formula <https://github.com/saltstack-formulas/php-formula>`_
 #. `postfix-formula <https://github.com/saltstack-formulas/postfix-formula>`_
 #. `postgres-formula <https://github.com/saltstack-formulas/postgres-formula>`_
+#. `powerdns-formula <https://github.com/saltstack-formulas/powerdns-formula>`_
 #. `prometheus-formula <https://github.com/saltstack-formulas/prometheus-formula>`_
 #. `rabbitmq-formula <https://github.com/saltstack-formulas/rabbitmq-formula>`_
 #. `redis-formula <https://github.com/saltstack-formulas/redis-formula>`_
@@ -221,6 +223,7 @@ These formulas are already compatible with semantic-release:
 #. `telegraf-formula <https://github.com/saltstack-formulas/telegraf-formula>`_
 #. `template-formula <https://github.com/saltstack-formulas/template-formula>`_
 #. `timezone-formula <https://github.com/saltstack-formulas/timezone-formula>`_
+#. `tomcat-formula <https://github.com/saltstack-formulas/tomcat-formula>`_
 #. `ufw-formula <https://github.com/saltstack-formulas/ufw-formula>`_
 #. `users-formula <https://github.com/saltstack-formulas/users-formula>`_
 #. `varnish-formula <https://github.com/saltstack-formulas/varnish-formula>`_
