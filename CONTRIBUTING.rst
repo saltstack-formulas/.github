@@ -167,6 +167,7 @@ These formulas are already compatible with semantic-release *and* have global ``
 #. `arvados-formula <https://github.com/saltstack-formulas/arvados-formula>`_
 #. `bind-formula <https://github.com/saltstack-formulas/bind-formula>`_
 #. `deepsea-formula <https://github.com/saltstack-formulas/deepsea-formula>`_
+#. `dhcpd-formula <https://github.com/saltstack-formulas/dhcpd-formula>`_
 #. `eclipse-formula <https://github.com/saltstack-formulas/eclipse-formula>`_
 #. `fail2ban-formula <https://github.com/saltstack-formulas/fail2ban-formula>`_
 #. `iptables-formula <https://github.com/saltstack-formulas/iptables-formula>`_
@@ -174,10 +175,14 @@ These formulas are already compatible with semantic-release *and* have global ``
 #. `letsencrypt-formula <https://github.com/saltstack-formulas/letsencrypt-formula>`_
 #. `libvirt-formula <https://github.com/saltstack-formulas/libvirt-formula>`_
 #. `lvm-formula <https://github.com/saltstack-formulas/lvm-formula>`_
+#. `nginx-formula <https://github.com/saltstack-formulas/nginx-formula>`_
 #. `nifi-formula <https://github.com/saltstack-formulas/nifi-formula>`_
+#. `openldap-formula <https://github.com/saltstack-formulas/openldap-formula>`_
 #. `openvpn-formula <https://github.com/saltstack-formulas/openvpn-formula>`_
 #. `packages-formula <https://github.com/saltstack-formulas/packages-formula>`_
+#. `php-formula <https://github.com/saltstack-formulas/php-formula>`_
 #. `postgres-formula <https://github.com/saltstack-formulas/postgres-formula>`_
+#. `powerdns-formula <https://github.com/saltstack-formulas/powerdns-formula>`_
 #. `salt-formula <https://github.com/saltstack-formulas/salt-formula>`_
 #. `strongswan-formula <https://github.com/saltstack-formulas/strongswan-formula>`_
 #. `sysctl-formula <https://github.com/saltstack-formulas/sysctl-formula>`_
@@ -186,7 +191,7 @@ These formulas are already compatible with semantic-release *and* have global ``
 
 These formulas are also compatible with semantic-release:
 
-21. `apache-formula <https://github.com/saltstack-formulas/apache-formula>`_
+26. `apache-formula <https://github.com/saltstack-formulas/apache-formula>`_
 #. `apt-cacher-formula <https://github.com/saltstack-formulas/apt-cacher-formula>`_
 #. `cert-formula <https://github.com/saltstack-formulas/cert-formula>`_
 #. `chrony-formula <https://github.com/saltstack-formulas/chrony-formula>`_
