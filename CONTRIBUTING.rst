@@ -198,7 +198,6 @@ These formulas are also compatible with semantic-release:
 #. `collectd-formula <https://github.com/saltstack-formulas/collectd-formula>`_
 #. `consul-formula <https://github.com/saltstack-formulas/consul-formula>`_
 #. `cron-formula <https://github.com/saltstack-formulas/cron-formula>`_
-#. `dhcpd-formula <https://github.com/saltstack-formulas/dhcpd-formula>`_
 #. `django-formula <https://github.com/saltstack-formulas/django-formula>`_
 #. `docker-formula <https://github.com/saltstack-formulas/docker-formula>`_
 #. `epel-formula <https://github.com/saltstack-formulas/epel-formula>`_
@@ -215,14 +214,10 @@ These formulas are also compatible with semantic-release:
 #. `mongodb-formula <https://github.com/saltstack-formulas/mongodb-formula>`_
 #. `mysql-formula <https://github.com/saltstack-formulas/mysql-formula>`_
 #. `nfs-formula <https://github.com/saltstack-formulas/nfs-formula>`_
-#. `nginx-formula <https://github.com/saltstack-formulas/nginx-formula>`_
 #. `node-formula <https://github.com/saltstack-formulas/node-formula>`_
 #. `ntp-formula <https://github.com/saltstack-formulas/ntp-formula>`_
-#. `openldap-formula <https://github.com/saltstack-formulas/openldap-formula>`_
 #. `openssh-formula <https://github.com/saltstack-formulas/openssh-formula>`_
-#. `php-formula <https://github.com/saltstack-formulas/php-formula>`_
 #. `postfix-formula <https://github.com/saltstack-formulas/postfix-formula>`_
-#. `powerdns-formula <https://github.com/saltstack-formulas/powerdns-formula>`_
 #. `prometheus-formula <https://github.com/saltstack-formulas/prometheus-formula>`_
 #. `rabbitmq-formula <https://github.com/saltstack-formulas/rabbitmq-formula>`_
 #. `redis-formula <https://github.com/saltstack-formulas/redis-formula>`_
