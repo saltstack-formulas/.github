@@ -19,3 +19,8 @@ repos:
     hooks:
       - id: renovate-config-validator
         name: Check Renovate config with renovate-config-validator
+        files: |
+          (?x)(
+               (^|/).?renovate(?:rc)?(?:\.json5?)?$|
+               default.json5
+          )$
