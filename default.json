@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default preset for use with Saltstack Formulas' repos",
+  "enabledManagers": [],
+  "extends": [
+    "config:best-practices"
+  ],
+  "automergeStrategy": "merge-commit",
+  "dependencyDashboardTitle": "Renovate Dashboard"
+}

@@ -22,5 +22,5 @@ repos:
         files: |
           (?x)(
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
-               default.json5
+               default.json
           )$
