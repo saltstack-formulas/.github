@@ -9,10 +9,12 @@
       "matchManagers": [
         "copier"
       ],
-      "description": "Limit branch creation to once a month",
       "extends": [
         "schedule:monthly"
-      ]
+      ],
+      "commitMessageTopic": "template {{depName}}",
+      "semanticCommitScope": "copier",
+      "semanticCommitType": "chore"
     }
   ]
 }
