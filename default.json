@@ -3,7 +3,8 @@
   "description": "Default preset for use with Saltstack Formulas' repos",
   "enabledManagers": [],
   "extends": [
-    "config:best-practices"
+    "config:best-practices",
+    ":approveMajorUpdates"
   ],
   "automergeStrategy": "merge-commit",
   "dependencyDashboardTitle": "Renovate Dashboard"
