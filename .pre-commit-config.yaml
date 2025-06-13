@@ -6,6 +6,8 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
+      - id: check-json
+        name: Check JSON files with check-json
       - id: check-yaml
         name: Check YAML files with check-yaml
   - repo: https://github.com/python-jsonschema/check-jsonschema
@@ -23,5 +25,6 @@ repos:
           (?x)(
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
-               copier.json
+               copier.json|
+               (?!)
           )$
