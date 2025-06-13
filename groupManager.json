@@ -3,14 +3,15 @@
   "description": "Group non-major updates by manager",
   "packageRules": [
     {
-      groupName: "`{{arg0}}` non-major {{arg1}}",
-      matchManagers: [
+      "groupName": "`{{arg0}}` non-major {{arg1}}",
+      "matchManagers": [
         "{{arg0}}"
       ],
-      matchUpdateTypes: [
+      "matchUpdateTypes": [
         "digest",
         "minor",
-        "patch"
+        "patch",
+        "pinDigest"
       ]
     }
   ]
