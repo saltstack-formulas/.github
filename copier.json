@@ -10,7 +10,7 @@
         "copier"
       ],
       "extends": [
-        "schedule:monthly"
+        "github>saltstack-formulas/.github:monthly"
       ],
       "commitMessageTopic": "template {{depName}}",
       "semanticCommitScope": "copier",
