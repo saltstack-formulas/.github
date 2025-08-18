@@ -27,5 +27,6 @@ repos:
                default.json|
                copier.json|
                monthly.json|
+               weekly.json|
                (?!)
           )$
