@@ -1,0 +1,7 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    "github>saltstack-formulas/.github",
+    "github>saltstack-formulas/.github:weekly",
+  ],
+}
