@@ -18,8 +18,7 @@ jobs:
       should-run: ${{ steps.action.outputs.should-run }}
     steps:
       - id: action
-        uses:
-          techneg-it/should-workflow-run@dcbb88600d59ec2842778ef1e2d41f680f876329 # v1.0.0
+        uses: techneg-it/should-workflow-run@dcbb88600d59ec2842778ef1e2d41f680f876329 # v1.0.0
   pre-commit:
     name: Lint / `pre-commit`
     needs: should-run
