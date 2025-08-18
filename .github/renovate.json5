@@ -1,5 +1,9 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  enabledManagers: [
+    'github-actions',
+    'pre-commit',
+  ],
   extends: [
     "github>saltstack-formulas/.github",
     "github>saltstack-formulas/.github:pre-commit",
