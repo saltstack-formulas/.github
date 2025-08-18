@@ -26,6 +26,7 @@ repos:
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
                copier.json|
+               pre-commit.json|
                monthly.json|
                weekly.json|
                (?!)
