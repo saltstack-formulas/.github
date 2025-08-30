@@ -29,7 +29,7 @@ Automation of multiple processes
 This formula uses `semantic-release <https://github.com/semantic-release/semantic-release>`_ for automating numerous processes such as bumping the version number appropriately, creating new tags/releases and updating the changelog.
 The entire process relies on the structure of commit messages to determine the version bump, which is then used for the rest of the automation.
 
-Full details are available in the upstream docs regarding the `Angular Commit Message Conventions <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines>`_.
+Full details are available in the upstream docs regarding the `Conventional Commits specification <https://www.conventionalcommits.org/en/v1.0.0/>`_.
 The key factor is that the first line of the commit message must follow this format:
 
 .. code-block:: console
@@ -71,8 +71,8 @@ formula's root directory and now ``pre-commit`` will run automatically on each
   pre-commit installed at .git/hooks/pre-commit
   pre-commit installed at .git/hooks/commit-msg
 
-Linting commit messages in Travis CI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Linting commit messages
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This formula uses `commitlint <https://github.com/conventional-changelog/commitlint>`_ for checking commit messages during CI testing.
 This ensures that they are in accordance with the ``semantic-release`` settings.
@@ -102,7 +102,7 @@ based upon the `type <https://github.com/angular/angular.js/blob/master/DEVELOPE
      - –
      -
    * - ``chore``
-     - –
+     - Maintenance
      - Changes to the build process or auxiliary tools and libraries such as
        documentation generation
      - –
@@ -138,18 +138,18 @@ based upon the `type <https://github.com/angular/angular.js/blob/master/DEVELOPE
      - –
      - 0.0.1
    * - ``revert``
-     - Reverts
+     - Reversions
      - A commit used to revert a previous commit
      - –
      - 0.0.1
    * - ``style``
-     - Styles
+     - Style Changes
      - Changes that do not affect the meaning of the code (white-space,
        formatting, missing semi-colons, etc.)
      - –
      - 0.0.1
    * - ``test``
-     - Tests
+     - Testing
      - Adding missing or correcting existing tests
      - –
      - 0.0.1
@@ -157,8 +157,8 @@ based upon the `type <https://github.com/angular/angular.js/blob/master/DEVELOPE
 Use ``BREAKING CHANGE`` to trigger a ``major`` version change
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Adding ``BREAKING CHANGE`` to the footer of the extended description of the commit message will **always** trigger a ``major`` version change, no matter which type has been used.
-This will be appended to the changelog and release notes as well.
+Adding ``BREAKING CHANGE`` to the footer of the extended description of the commit message, or appending a ! after the type/scope, will **always** trigger a ``major`` version change, no matter which type has been used.
+This will be highlighted in the changelog and release notes as well.
 To preserve good formatting of these notes, the following format is prescribed:
 
 * ``BREAKING CHANGE: <explanation in paragraph format>.``
