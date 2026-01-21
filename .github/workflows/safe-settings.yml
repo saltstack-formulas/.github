@@ -8,8 +8,12 @@ on:
         type: boolean
         default: true
 
+permissions: {}
+
 jobs:
   apply-safe-settings:
+    permissions:
+      contents: read
     runs-on: ubuntu-24.04
     env:
       # Version/tag of `github/safe-settings` repository to use:
@@ -19,15 +23,18 @@ jobs:
       SAFE_SETTINGS_CODE_DIR: ${{ github.workspace }}/.safe-settings-code
     steps:
       # Self-checkout of 'admin' repo for access to safe-settings deployment configuration
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
 
       # Checkout of `safe-settings` source repository to apply all settings
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           repository: github/safe-settings
           ref: ${{ env.SAFE_SETTINGS_VERSION }}
           path: ${{ env.SAFE_SETTINGS_CODE_DIR }}
-      - uses: actions/setup-node@v6.1.0
+          persist-credentials: false
+      - uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
       - run: npm install
         working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
       - name: Run Safe-Settings Full-Sync

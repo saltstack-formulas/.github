@@ -4,8 +4,12 @@
 name: Commitlint
 'on': [pull_request]
 
+permissions: {}
+
 jobs:
   lint:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -13,4 +17,5 @@ jobs:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
       - uses: wagoid/commitlint-github-action@a85daedc64529d02d566e7f83c3c48c77e78af85 # v1
