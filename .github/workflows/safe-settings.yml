@@ -1,0 +1,62 @@
+name: Apply Safe Settings
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Whether to run in `dry-run` mode or not
+        required: false
+        type: boolean
+        default: true
+
+permissions: {}
+
+jobs:
+  apply-safe-settings:
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    env:
+      # Version/tag of `github/safe-settings` repository to use:
+      SAFE_SETTINGS_VERSION: 2.1.18
+
+      # Path on GHA runner box where safe-settings code downloaded to:
+      SAFE_SETTINGS_CODE_DIR: ${{ github.workspace }}/.safe-settings-code
+    steps:
+      # Self-checkout of 'admin' repo for access to safe-settings deployment configuration
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      # Checkout of `safe-settings` source repository to apply all settings
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          repository: github/safe-settings
+          ref: ${{ env.SAFE_SETTINGS_VERSION }}
+          path: ${{ env.SAFE_SETTINGS_CODE_DIR }}
+          persist-credentials: false
+      - uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+      - run: npm install
+        working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
+      - name: Run Safe-Settings Full-Sync
+        run: |
+          set +e  # Allow commands to fail
+          npm run full-sync
+          exit_code=$?
+          echo "Full-sync exit code: $exit_code"
+
+          if [[ "$FULL_SYNC_NOP" == "true" ]]; then
+            echo "Dry-run mode — ignoring failure"
+            exit 0
+          fi
+
+          exit $exit_code
+        working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
+        env:
+          APP_ID: ${{ vars.SAFE_SETTINGS_APP_ID }}
+          ADMIN_REPO: ${{ vars.SAFE_SETTINGS_ADMIN_REPO || '.github' }}
+          CONFIG_PATH: ${{ vars.SAFE_SETTINGS_CONFIG_PATH || 'safe-settings' }}
+          DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/${{ vars.SAFE_SETTINGS_CONFIG_PATH || 'safe-settings' }}/deployment-settings.yml
+          FULL_SYNC_NOP: ${{ inputs.dry-run }}
+          GH_ORG: ${{ vars.SAFE_SETTINGS_GH_ORG }}
+          LOG_LEVEL: ${{ vars.SAFE_SETTINGS_LOG_LEVEL || 'debug' }}
+          PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}

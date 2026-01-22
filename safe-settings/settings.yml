@@ -1,0 +1,5 @@
+repository:
+  topics:
+    - template
+    - salt-formula
+    - saltstack-formula

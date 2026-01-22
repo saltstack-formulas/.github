@@ -9,6 +9,8 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
 
+permissions: {}
+
 jobs:
   should-run:
     name: Prep / Should run
@@ -24,10 +26,14 @@ jobs:
     needs: should-run
     if: fromJSON(needs.should-run.outputs.should-run)
     container: techneg/ci-pre-commit:v2.5.26@sha256:46f3dbce03b7446d3f5ed4f45303eb0035dfd1d090e89d7a83e2e55f172bbd17
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
       - name: Export `CI_CACHE_ID` from container
         run: echo "CI_CACHE_ID=$(cat /.ci_cache_id)" >> $GITHUB_ENV
       - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
