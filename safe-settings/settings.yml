@@ -1,4 +1,26 @@
+# See https://github.com/github/safe-settings/tree/main-enterprise/docs/sample-settings for example settings
+# and https://docs.github.com/en/rest/reference/repos#update-a-repository for
+# the GitHub REST API definitions
+
 repository:
+  # As we use `semantic-release` throughout the formulas, which means every
+  # commit message is important, we disallow squash merging so that commit
+  # messages are not missed.
+  # In addition, Renovate defaults to squash merging unless the repository
+  # settings disallows it.
+  allow_squash_merge: false
+  rulesets:
+    - name: Prevent destruction of the default branch
+      target: branch
+      enforcement: active
+      conditions:
+        ref_name:
+          include:
+            - ~DEFAULT_BRANCH
+          exclude: []
+      rules:
+        - type: deletion
+        - type: non_fast_forward
   topics:
     - template
     - salt-formula
