@@ -5,7 +5,7 @@
 repository:
   # As we use `semantic-release` throughout the formulas, which means every
   # commit message is important, we disallow squash merging so that commit
-  # messages are not missed.
+  # messages are not inadvertently destroyed.
   # In addition, Renovate defaults to squash merging unless the repository
   # settings disallows it.
   allow_squash_merge: false
