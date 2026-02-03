@@ -9,18 +9,6 @@ repository:
   # In addition, Renovate defaults to squash merging unless the repository
   # settings disallows it.
   allow_squash_merge: false
-  rulesets:
-    - name: Prevent destruction of the default branch
-      target: branch
-      enforcement: active
-      conditions:
-        ref_name:
-          include:
-            - ~DEFAULT_BRANCH
-          exclude: []
-      rules:
-        - type: deletion
-        - type: non_fast_forward
   topics:
     - template
     - salt-formula
