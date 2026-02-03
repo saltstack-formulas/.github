@@ -30,4 +30,8 @@ rulesets:
           required_status_checks:
             - context: Release / Collect results
               integration_id: 15368
+            - context: GitLab CI pipeline (pull request)
+              integration_id: 31373
+            - context: lint
+              integration_id: 15368
           strict_required_status_checks_policy: false
