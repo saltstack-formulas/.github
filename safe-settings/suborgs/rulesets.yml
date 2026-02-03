@@ -16,3 +16,18 @@ rulesets:
     rules:
       - type: deletion
       - type: non_fast_forward
+  - name: Require status checks before updating the default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude: []
+    rules:
+      - type: required_status_checks
+        parameters:
+          required_status_checks:
+            - context: Release / Collect results
+              integration_id: 15368
+          strict_required_status_checks_policy: false
