@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       # Version/tag of `github/safe-settings` repository to use:
-      SAFE_SETTINGS_VERSION: 2.1.18
+      SAFE_SETTINGS_VERSION: ff7a65655d33006b9820479df0a9e1057a8927e4 # 2.1.17
 
       # Path on GHA runner box where safe-settings code downloaded to:
       SAFE_SETTINGS_CODE_DIR: .safe-settings-code
