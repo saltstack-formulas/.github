@@ -9,6 +9,10 @@ repository:
   # In addition, Renovate defaults to squash merging unless the repository
   # settings disallows it.
   allow_squash_merge: false
+
+  # Allow auto-merging to allow Renovate to work more efficiently
+  allow_auto_merge: true
+
   topics:
     - salt-formula
     - saltstack-formula
