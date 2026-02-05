@@ -10,6 +10,5 @@ repository:
   # settings disallows it.
   allow_squash_merge: false
   topics:
-    - template
     - salt-formula
     - saltstack-formula
