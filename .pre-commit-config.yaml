@@ -3,6 +3,13 @@
 # See https://pre-commit.com/hooks.html for more hooks
 
 repos:
+  - repo: local
+    hooks:
+      - id: check-json-in-config
+        name: Check Renovate presets are listed in pre-commit-config.yaml
+        entry: .cicd/hooks/check-json-in-config.py
+        language: python
+        types: [json]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -31,6 +38,7 @@ repos:
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
                copier.json|
+               groupManager.json|
                pre-commit.json|
                monthly.json|
                weekly.json|
