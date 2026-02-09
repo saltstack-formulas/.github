@@ -3,8 +3,10 @@
   "description": "Default preset for use with Saltstack Formulas' repos",
   "enabledManagers": [],
   "extends": [
-    "config:best-practices",
-    ":approveMajorUpdates"
+    "config:best-practices"
+  ],
+  "ignorePresets": [
+    ":maintainLockFilesWeekly"
   ],
   "automergeStrategy": "merge-commit",
   "dependencyDashboardTitle": "Renovate Dashboard"
