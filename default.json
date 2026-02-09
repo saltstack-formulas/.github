@@ -6,6 +6,9 @@
     "config:best-practices",
     ":approveMajorUpdates"
   ],
+  "ignorePresets": [
+    ":maintainLockFilesWeekly"
+  ],
   "automergeStrategy": "merge-commit",
   "dependencyDashboardTitle": "Renovate Dashboard"
 }
