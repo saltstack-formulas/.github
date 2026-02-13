@@ -5,7 +5,7 @@
 		{
 			"groupName": "`{{arg0}}` non-major {{arg1}}",
 			"matchManagers": ["{{arg0}}"],
-			"matchUpdateTypes": ["digest", "minor", "patch"]
+			"matchUpdateTypes": ["minor", "patch"]
 		}
 	]
 }
