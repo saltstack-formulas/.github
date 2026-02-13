@@ -38,6 +38,7 @@ repos:
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
                copier.json|
+               group-by-manager.json|
                groupManager.json|
                pre-commit.json|
                monthly.json|
