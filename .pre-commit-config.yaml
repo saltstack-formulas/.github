@@ -42,6 +42,7 @@ repos:
                groupManager.json|
                pre-commit.json|
                monthly.json|
+               update-github-actions.json|
                weekly.json|
                (?!)
           )$
