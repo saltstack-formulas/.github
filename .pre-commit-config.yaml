@@ -36,6 +36,7 @@ repos:
         files: |
           (?x)(
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
+               automerge-for-formulas.json|
                default.json|
                copier.json|
                group-by-manager.json|
