@@ -1,0 +1,8 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Group `gitlabci` non-major updates and enable regex versions",
+	"extends": [
+		"github>saltstack-formulas/.github:group-by-manager(gitlabci,images)",
+		"customManagers:gitlabPipelineVersions"
+	]
+}
