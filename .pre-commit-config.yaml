@@ -44,6 +44,8 @@ repos:
                pre-commit.json|
                monthly.json|
                update-github-actions.json|
+               update-gitlab-ci.json|
+               update-pre-commit.json|
                weekly.json|
                (?!)
           )$
