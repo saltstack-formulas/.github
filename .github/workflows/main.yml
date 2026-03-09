@@ -25,7 +25,7 @@ jobs:
     name: Lint / `pre-commit`
     needs: should-run
     if: fromJSON(needs.should-run.outputs.should-run)
-    container: techneg/ci-pre-commit:v2.5.31@sha256:e8e3afa76efb8cb17175da31217d2e984499dc6f6d84441cd576771203be9b5f
+    container: techneg/ci-pre-commit:v2.5.33@sha256:8a7116fb9b70b1fe1950ddcbde7ea3335549030e41fb845da3044c37cffc2ba4
     permissions:
       contents: read
     runs-on: ubuntu-latest
