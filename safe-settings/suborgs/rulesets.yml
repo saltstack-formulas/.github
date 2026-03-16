@@ -19,6 +19,12 @@ rulesets:
   - name: Require status checks before updating the default branch
     target: branch
     enforcement: active
+    bypass_actors:
+      # Bypass needed for the team `release-automation-bots` to allow for
+      # GitLab CI-managed releases
+      - actor_id: 16592346
+        actor_type: Team
+        bypass_mode: always
     conditions:
       ref_name:
         include:
