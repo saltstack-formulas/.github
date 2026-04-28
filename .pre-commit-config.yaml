@@ -43,6 +43,7 @@ repos:
                groupManager.json|
                pre-commit.json|
                monthly.json|
+               update-chef-workstation.json|
                update-github-actions.json|
                update-gitlab-ci.json|
                update-pre-commit.json|

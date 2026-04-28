@@ -1,0 +1,19 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Preset for tracking Chef Workstation stable versions",
+	"customDatasources": {
+		"omnitruck": {
+			"defaultRegistryUrlTemplate": "https://omnitruck.chef.io/stable/{{packageName}}/versions/latest",
+			"transformTemplates": ["{'releases': [{ 'version': $string($) }] }"]
+		}
+	},
+	"customManagers": [
+		{
+			"customType": "regex",
+			"datasourceTemplate": "custom.omnitruck",
+			"depNameTemplate": "chef-workstation",
+			"managerFilePatterns": ["/(^|/)Gemfile$/"],
+			"matchStrings": ["# renovate: chef-workstation (?<currentValue>.+?)\\s"]
+		}
+	]
+}
