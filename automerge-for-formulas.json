@@ -11,6 +11,13 @@
       "extends": [
         ":automergeMinor"
       ]
+    },
+    {
+      "description": "Disable auto-merge of `chef-workstation` so that Gemfile can be updated manually",
+      "matchDepNames": ["chef-workstation"],
+      "extends": [
+        ":automergeDisabled"
+      ]
     }
   ]
 }
