@@ -4,6 +4,7 @@
 	"packageRules": [
 		{
 			"groupName": "`{{arg0}}` non-major {{arg1}}",
+			"groupSingleUpdates": true,
 			"matchManagers": ["{{arg0}}"],
 			"matchUpdateTypes": ["minor", "patch"]
 		}
