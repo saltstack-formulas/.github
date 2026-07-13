@@ -1,0 +1,22 @@
+name: Apply Safe Settings to Formulas
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Whether to run in `dry-run` mode or not
+        required: false
+        type: boolean
+        default: true
+
+permissions: {}
+
+jobs:
+  apply-safe-settings:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/libsafe-settings.yml
+    with:
+      app-id: ${{ vars.SAFE_SETTINGS_APP_ID }}
+      dry-run: ${{ inputs.dry-run }}
+    secrets:
+      private-key: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
