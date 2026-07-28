@@ -1,0 +1,49 @@
+# See https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/suborg.yml
+# for example layout
+
+suborgrepos:
+  - '*'
+
+environments:
+  - name: production
+    deployment_branch_policy:
+      protected_branches: false
+      custom_branch_policies:
+        - names: [master]
+          type: branch
+    wait_timer: 0
+    variables:
+      - name: SAFE_SETTINGS_APP_ID
+        value: '2650975'
+  - name: test
+    variables:
+      - name: SAFE_SETTINGS_APP_ID
+        value: '3020872'
+
+rulesets:
+  - name: Prevent destruction of the default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude: []
+    rules:
+      - type: deletion
+      - type: non_fast_forward
+  - name: Require status checks before updating the default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude: []
+    rules:
+      - type: required_status_checks
+        parameters:
+          required_status_checks:
+            - context: Release / Collect results
+              integration_id: 15368
+          strict_required_status_checks_policy: false
