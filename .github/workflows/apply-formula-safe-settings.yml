@@ -1,0 +1,22 @@
+name: Apply Formula Safe Settings
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Whether to run in `dry-run` mode or not
+        required: false
+        type: boolean
+        default: true
+
+permissions: {}
+
+jobs:
+  apply-safe-settings:
+    permissions:
+      contents: read
+    # This is required to work with environment secrets in the called workflow
+    secrets: inherit # zizmor: ignore[secrets-inherit]
+    uses: ./.github/workflows/libsafe-settings.yml
+    with:
+      config-path: formula-safe-settings
+      dry-run: ${{ inputs.dry-run }}
