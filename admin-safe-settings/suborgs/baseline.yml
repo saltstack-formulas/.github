@@ -20,6 +20,17 @@ environments:
       - name: SAFE_SETTINGS_APP_ID
         value: '3020872'
 
+repository:
+  # As we use `semantic-release` throughout the formulas, which means every
+  # commit message is important, we disallow squash merging so that commit
+  # messages are not inadvertently destroyed.
+  # In addition, Renovate defaults to squash merging unless the repository
+  # settings disallows it.
+  allow_squash_merge: false
+
+  # Allow auto-merging to allow Renovate to work more efficiently
+  allow_auto_merge: true
+
 rulesets:
   - name: Prevent destruction of the default branch
     target: branch
