@@ -1,0 +1,9 @@
+restrictedRepos:
+  include:
+    - nginx-formula
+    - openssh-formula
+    - postfix-formula
+    - salt-formula
+    - syslog-ng-formula
+    - template-formula
+    - vault-formula
