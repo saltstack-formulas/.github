@@ -16,7 +16,7 @@ jobs:
       contents: read
     # This is required to work with environment secrets in the called workflow
     secrets: inherit # zizmor: ignore[secrets-inherit]
-    uses: ./.github/workflows/libsafe-settings.yml
+    uses: $/.github/workflows/libsafe-settings.yml
     with:
       config-path: formula-safe-settings
       dry-run: ${{ inputs.dry-run }}
