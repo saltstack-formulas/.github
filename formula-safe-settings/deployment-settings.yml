@@ -1,9 +1,12 @@
 restrictedRepos:
   include:
+    - chrony-formula
     - nginx-formula
     - openssh-formula
     - postfix-formula
     - salt-formula
+    - sysctl-formula
     - syslog-ng-formula
     - template-formula
     - vault-formula
+    - vim-formula
