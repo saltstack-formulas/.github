@@ -1,10 +1,13 @@
 restrictedRepos:
   include:
+    - apt-formula
     - chrony-formula
     - nginx-formula
     - openssh-formula
     - postfix-formula
     - salt-formula
+    - strongswan-formula
+    - stunnel-formula
     - sysctl-formula
     - syslog-ng-formula
     - template-formula
