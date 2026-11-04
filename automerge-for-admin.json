@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Auto-merge settings for Saltstack Formulas' admin repository",
+  "extends": [
+    ":automergeStableNonMajor"
+  ],
+  "packageRules": [
+    {
+      "description": "Auto-merge minor updates of `check-jsonschema` despite versions being v0.x",
+      "matchDepNames": ["python-jsonschema/check-jsonschema"],
+      "extends": [
+        ":automergeMinor"
+      ]
+    }
+  ]
+}
