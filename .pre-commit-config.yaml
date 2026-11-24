@@ -40,6 +40,7 @@ repos:
                automerge-for-formulas.json|
                default.json|
                copier.json|
+               configure-renovate-updates.json|
                group-by-manager.json|
                groupManager.json|
                pre-commit.json|
